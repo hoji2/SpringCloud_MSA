@@ -11,6 +11,16 @@ public class ProductController {
 
     @GetMapping(path = "{productId}")
     public String getProductInfo(@PathVariable String productId) {
-        return "[product id = " + productId + " at " + System.currentTimeMillis() + "]";
+    	
+//    	try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+    	
+    	throw new RuntimeException("I/O Exception");
+//    	System.out.println("Called product id "+productId);
+//        return "[product id = " + productId + " at " + System.currentTimeMillis() + "]";
     }
 }
